@@ -4,43 +4,48 @@ import model.Staff;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 
-public class ReadAndWriteAlbum {
-    File file = new File("album.csv");
-    public void writeFile(List<Staff> albumList) {
+public class ReadAndWriteStaff {
+    File file = new File("staff.csv");
+
+    public void writeFile(ArrayList<Staff> staffList) {
         try {
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             String data = "";
-            for (Staff album :
-                    albumList) {
-                data += album.getId() + ", " +
-                        album.getSong();
+            for (Staff staff :
+                    staffList) {
+                data += staff.getId() + ", " +
+                        staff.getName() + ", " +
+                        staff.getAge() + ", " +
+                        staff.isStatus();
             }
             bufferedWriter.write(data);
             bufferedWriter.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
     public ArrayList<Staff> readFile() {
-        ArrayList<Staff> albums = new ArrayList<>();
+        ArrayList<Staff> staffArrayList = new ArrayList<>();
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] data = line.split(", ");
-                Staff album = new Staff(Integer.parseInt(data[0]), data[1]);
-                bufferedReader.close();
+                Staff staff = new Staff(Integer.parseInt(data[0]), data[1], Integer.parseInt(data[2]), (data[3]));
+                staffArrayList.add(staff);
             }
+            bufferedReader.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return albums;
+        return staffArrayList;
     }
 }
+
+

@@ -1,17 +1,20 @@
 package manger;
 
-import dao.ReadAndWriteAlbum;
+import dao.ReadAndWriteStaff;
 import model.Staff;
 
 import java.util.ArrayList;
 
-public class StaffManger implements Manger<Staff>{
+public class StaffManger implements IManger<Staff> {
     ArrayList<Staff> staffList;
-    ReadAndWriteAlbum readAndWriteAlbum = new ReadAndWriteAlbum();
+    ReadAndWriteStaff readAndWriteStaff = new ReadAndWriteStaff();
+    public StaffManger() {
+        this.staffList = readAndWriteStaff.readFile();
+    }
     @Override
     public boolean add(Staff staff) {
         this.staffList.add(staff);
-        readAndWriteAlbum.writeFile(this.staffList);
+        readAndWriteStaff.writeFile(this.staffList);
         return true;
     }
 
@@ -22,7 +25,7 @@ public class StaffManger implements Manger<Staff>{
             return false;
         }
         this.staffList.set(index, newStaff);
-        readAndWriteAlbum.writeFile(staffList);
+        readAndWriteStaff.writeFile(this.staffList);
         return true;
     }
 
@@ -30,7 +33,7 @@ public class StaffManger implements Manger<Staff>{
     public boolean delete(int id) {
         int index = findById(id);
         this.staffList.remove(index);
-        readAndWriteAlbum.writeFile(staffList);
+        readAndWriteStaff.writeFile(this.staffList);
         return true;
     }
 
@@ -46,5 +49,25 @@ public class StaffManger implements Manger<Staff>{
             }
         }
         return -1;
+    }
+
+    public ArrayList<Staff> findStaffByName(String name) {
+        ArrayList<Staff> staff = new ArrayList<>();
+        for (int i = 0; i < staffList.size(); i++) {
+            if (staffList.get(i).getName().toLowerCase().contains(name.toLowerCase())) {
+                staff.add(staffList.get(i));
+            }
+        }
+        return staff;
+    }
+
+    public boolean checkName(String name) {
+        boolean checkName = false;
+        for (int i = 0; i < staffList.size(); i++) {
+            if (staffList.get(i).getName().toLowerCase().contains(name.toLowerCase())) {
+                return checkName = true;
+            }
+        }
+        return checkName;
     }
 }

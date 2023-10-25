@@ -1,6 +1,10 @@
 package input;
 
 
+import model.Staff;
+import org.omg.PortableInterceptor.ServerRequestInfo;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Input {
@@ -20,7 +24,33 @@ public class Input {
     }
 
     public static String getInputString() {
-        String regexString = "^[A-Za-z]+$";
+        String regexString = "^[\\p{L}\\p{M}]+$";
+        String string;
+        while (true) {
+            string = input.nextLine();
+            if (string.matches(regexString)) {
+                return string;
+            } else {
+                System.out.print("Vui lòng nhập lại: ");
+            }
+        }
+    }
+
+    public static String getInputBoolean() {
+        String regexBoolean = "^(?i:true|false)$";
+        String string;
+        while (true) {
+            string = input.nextLine();
+            if (string.matches(regexBoolean)) {
+                return string;
+            } else {
+                System.out.print("Vui lòng nhập lại: ");
+            }
+        }
+    }
+
+    public static String getInputType() {
+        String regexString = "^(partime|fulltime)$";
         String string;
         while (true) {
             string = input.nextLine();

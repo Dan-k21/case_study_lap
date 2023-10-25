@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f513d1f0-3a79-47ab-9d40-f2f11c2d8da1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/album.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/ReadAndWriteAlbum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manger/Manger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manger/StaffManger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/album.csv" beforeDir="false" afterPath="$PROJECT_DIR$/staff.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReadAndWriteAlbum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReadAndWriteStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manger/Manger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manger/IManger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manger/StaffManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manger/StaffManger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +51,45 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\CoffeMenu\case_study" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="BooleanValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BooleanValidator" />
+      <module name="case_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmploymentStatus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EmploymentStatus" />
+      <module name="case_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="case_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.EmploymentStatus" />
+        <item itemvalue="Application.BooleanValidator" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,6 +103,17 @@
       <workItem from="1697629752124" duration="1122000" />
       <workItem from="1697630925797" duration="8300000" />
       <workItem from="1697646247967" duration="1561000" />
+      <workItem from="1697805132780" duration="114000" />
+      <workItem from="1697808597011" duration="3633000" />
+      <workItem from="1697912249717" duration="689000" />
+      <workItem from="1697946411654" duration="5517000" />
+      <workItem from="1697988298067" duration="16000" />
+      <workItem from="1697988322972" duration="981000" />
+      <workItem from="1697989876313" duration="750000" />
+      <workItem from="1698059709103" duration="10307000" />
+      <workItem from="1698071287307" duration="1360000" />
+      <workItem from="1698139664695" duration="5317000" />
+      <workItem from="1698209383349" duration="1432000" />
     </task>
     <servers />
   </component>
